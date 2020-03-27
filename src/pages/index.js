@@ -5,7 +5,7 @@ import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 class IndexPage extends React.Component {
   state = {
-    value: window.localStorage.getItem('value') || '',
+    value: typeof window !== 'undefined' ? window.localStorage.getItem('value') || '': '',
     copied: false,
   }
   onChange = ({target: {value}}) => {
