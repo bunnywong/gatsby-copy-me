@@ -24,11 +24,12 @@ class IndexPage extends React.Component {
       <Layout>
         <SEO title='Home' />
 
-        <section className="section">
-          <input
+        <section className="section" style={{display: 'flex'}}>
+          <textarea
             onChange={this.onChange}
             value={this.state.value}
-            />
+          >
+          </textarea>
           <CopyToClipboard
             onCopy={this.onCopy}
             options={{message: 'Whoa!'}}
